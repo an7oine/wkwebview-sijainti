@@ -6,7 +6,7 @@ import WebKit
 import CoreLocation
 
 
-public protocol Sijaintihaku {
+@objc public protocol Sijaintihaku {
     func sivuAvattu()
 }
 
@@ -89,7 +89,7 @@ extension Sijainti: Sijaintihaku {
     }
 }
 
-public extension WKWebView {
+@objc public extension WKWebView {
     func sijainti() -> Sijaintihaku {
         Sijainti(self)
     }
